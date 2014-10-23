@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="red_50">#fde0dc</color>
+    <color name="red_100">#f9bdbb</color>
+    <color name="red_200">#f69988</color>
+    <color name="red_300">#f36c60</color>
+    <color name="red_400">#e84e40</color>
+    <color name="red_500">#e51c23</color>
+    <color name="red_600">#dd191d</color>
+    <color name="red_700">#d01716</color>
+    <color name="red_800">#c41411</color>
+    <color name="red_900">#b0120a</color>
+    
+    
+    
+    <array name="red">
+        <item>@color/red_50</item>
+        <item>@color/red_100</item>
+        <item>@color/red_200</item>
+        <item>@color/red_300</item>
+        <item>@color/red_400</item>
+        <item>@color/red_500</item>
+        <item>@color/red_600</item>
+        <item>@color/red_700</item>
+        <item>@color/red_800</item>
+        <item>@color/red_900</item>
+        
+    </array>
+</resources>
