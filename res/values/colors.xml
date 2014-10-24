@@ -11,7 +11,6 @@
     <color name="red_700">#d01716</color>
     <color name="red_800">#c41411</color>
     <color name="red_900">#b0120a</color>
-    
     <color name="pink_50">#fce4ec</color>
     <color name="pink_100">#f8bbd0</color>
     <color name="pink_200">#f48fb1</color>
@@ -22,7 +21,6 @@
     <color name="pink_700">#c2185b</color>
     <color name="pink_800">#ad1457</color>
     <color name="pink_900">#880e4f</color>
-    
     <color name="purple_50">#f3e5f5</color>
     <color name="purple_100">#e1bee7</color>
     <color name="purple_200">#ce93d8</color>
@@ -33,7 +31,6 @@
     <color name="purple_700">#7b1fa2</color>
     <color name="purple_800">#6a1b9a</color>
     <color name="purple_900">#4a148c</color>
-    
     <color name="deep_purple_50">#ede7f6</color>
     <color name="deep_purple_100">#d1c4e9</color>
     <color name="deep_purple_200">#b39ddb</color>
@@ -44,7 +41,6 @@
     <color name="deep_purple_700">#512da8</color>
     <color name="deep_purple_800">#4527a0</color>
     <color name="deep_purple_900">#311b92</color>
-    
     <color name="indigo_50">#e8eaf6</color>
     <color name="indigo_100">#c5cae9</color>
     <color name="dindigo_200">#9fa8da</color>
@@ -55,7 +51,6 @@
     <color name="indigo_700">#303f9f</color>
     <color name="indigo_800">#283593</color>
     <color name="indigo_900">#1a237e</color>
-    
     <color name="blue_50">#e7e9fd</color>
     <color name="blue_100">#d0d9ff</color>
     <color name="blue_200">#afbfff</color>
@@ -66,7 +61,6 @@
     <color name="blue_700">#455ede</color>
     <color name="blue_800">#3b50ce</color>
     <color name="blue_900">#2a36b1</color>
-    
     <color name="light_blue_50">#e1f5fe</color>
     <color name="light_blue_100">#b3e5fc</color>
     <color name="light_blue_200">#81d4fa</color>
@@ -75,10 +69,9 @@
     <color name="light_blue_500">#03a9f4</color>
     <color name="light_blue_600">#039be5</color>
     <color name="light_blue_700">#0288d1</color>
-	<color name="light_blue_800">#0277bd</color>
-	<color name="light_blue_900">#01579b</color>
-    
-	<color name="cyan_50">#e0f7fa</color>
+    <color name="light_blue_800">#0277bd</color>
+    <color name="light_blue_900">#01579b</color>
+    <color name="cyan_50">#e0f7fa</color>
     <color name="cyan_100">#b2ebf2</color>
     <color name="cyan_200">#80deea</color>
     <color name="cyan_300">#4dd0e1</color>
@@ -88,7 +81,6 @@
     <color name="cyan_700">#0097a7</color>
     <color name="cyan_800">#00838f</color>
     <color name="cyan_900">#006064</color>
-	
     <color name="teal_50">#e0f2f1</color>
     <color name="teal_100">#b2dfdb</color>
     <color name="teal_200">#80cbc4</color>
@@ -99,7 +91,6 @@
     <color name="teal_700">#00796b</color>
     <color name="teal_800">#00695c</color>
     <color name="teal_900">#004d40</color>
-  
     <color name="green_50">#d0f8ce</color>
     <color name="green_100">#a3e9a4</color>
     <color name="green_200">#72d572</color>
@@ -110,7 +101,6 @@
     <color name="green_700">#0a7e07</color>
     <color name="green_800">#056f00</color>
     <color name="green_900">#0d5302</color>
-  
     <color name="light_green_50">#f1f8e9</color>
     <color name="light_green_100">#dcedc8</color>
     <color name="light_green_200">#c5e1a5</color>
@@ -121,7 +111,6 @@
     <color name="light_green_700">#689f38</color>
     <color name="light_green_800">#558b2f</color>
     <color name="light_green_900">#33691e</color>
-  
     <color name="lime_50">#f9fbe7</color>
     <color name="lime_100">#f0f4c3</color>
     <color name="lime_200">#e6ee9c</color>
@@ -132,7 +121,6 @@
     <color name="lime_700">#afb42b</color>
     <color name="lime_800">#9e9d24</color>
     <color name="lime_900">#827717</color>
-    
     <color name="yellow_50">#fffde7</color>
     <color name="yellow_100">#fff9c4</color>
     <color name="yellow_200">#fff59d</color>
@@ -143,7 +131,6 @@
     <color name="yellow_700">#fbc02d</color>
     <color name="yellow_800">#f9a825</color>
     <color name="yellow_900">#f57f17</color>
-  
     <color name="amber_50">#fff8e1</color>
     <color name="amber_100">#ffecb3</color>
     <color name="amber_200">#ffe082</color>
@@ -154,7 +141,6 @@
     <color name="amber_700">#ffa000</color>
     <color name="amber_800">#ff8f00</color>
     <color name="amber_900">#ff6f00</color>
-  
     <color name="orange_50">#fff3e0</color>
     <color name="orange_100">#ffe0b2</color>
     <color name="orange_200">#ffcc80</color>
@@ -165,7 +151,6 @@
     <color name="orange_700">#f57c00</color>
     <color name="orange_800">#ef6c00</color>
     <color name="orange_900">#e65100</color>
-    
     <color name="deep_orange_50">#fbe9e7</color>
     <color name="deep_orange_100">#ffccbc</color>
     <color name="deep_orange_200">#ffab91</color>
@@ -176,7 +161,6 @@
     <color name="deep_orange_700">#e64a19</color>
     <color name="deep_orange_800">#d84315</color>
     <color name="deep_orange_900">#bf360c</color>
-    
     <color name="brown_50">#efebe9</color>
     <color name="brown_100">#d7ccc8</color>
     <color name="brown_200">#bcaaa4</color>
@@ -187,7 +171,6 @@
     <color name="brown_700">#5d4037</color>
     <color name="brown_800">#4e342e</color>
     <color name="brown_900">#3e2723</color>
-    
     <color name="grey_50">#fafafa</color>
     <color name="grey_100">#f5f5f5</color>
     <color name="grey_200">#eeeeee</color>
@@ -198,7 +181,6 @@
     <color name="grey_700">#616161</color>
     <color name="grey_800">#424242</color>
     <color name="grey_900">#212121</color>
-  
     <color name="blue_grey_50">#eceff1</color>
     <color name="blue_grey_100">#cfd8dc</color>
     <color name="blue_grey_200">#b0bec5</color>
@@ -209,7 +191,7 @@
     <color name="blue_grey_700">#455a64</color>
     <color name="blue_grey_800">#37474f</color>
     <color name="blue_grey_900">#263238</color>
-    
+
     <array name="red">
         <item>@color/red_50</item>
         <item>@color/red_100</item>
@@ -293,8 +275,8 @@
         <item>@color/light_blue_700</item>
         <item>@color/light_blue_800</item>
         <item>@color/light_blue_900</item>
-	</array>
-	<array name="cyan">
+    </array>
+    <array name="cyan">
         <item>@color/cyan_50</item>
         <item>@color/cyan_100</item>
         <item>@color/cyan_200</item>
@@ -305,7 +287,7 @@
         <item>@color/cyan_700</item>
         <item>@color/cyan_800</item>
         <item>@color/cyan_900</item>
-	</array>
+    </array>
     <array name="teal">
         <item>@color/teal_50</item>
         <item>@color/teal_100</item>
@@ -317,8 +299,8 @@
         <item>@color/teal_700</item>
         <item>@color/teal_800</item>
         <item>@color/teal_900</item>
-	</array>
-	<array name="green">
+    </array>
+    <array name="green">
         <item>@color/green_50</item>
         <item>@color/green_100</item>
         <item>@color/green_200</item>
@@ -329,7 +311,7 @@
         <item>@color/green_700</item>
         <item>@color/green_800</item>
         <item>@color/green_900</item>
-	</array>
+    </array>
     <array name="light_green">
         <item>@color/light_green_50</item>
         <item>@color/light_green_100</item>
@@ -341,8 +323,8 @@
         <item>@color/light_green_700</item>
         <item>@color/light_green_800</item>
         <item>@color/light_green_900</item>
-	</array>
-	<array name="lime">
+    </array>
+    <array name="lime">
         <item>@color/lime_50</item>
         <item>@color/lime_100</item>
         <item>@color/lime_200</item>
@@ -353,8 +335,8 @@
         <item>@color/lime_700</item>
         <item>@color/lime_800</item>
         <item>@color/lime_900</item>
-	</array>
-	<array name="yellow">
+    </array>
+    <array name="yellow">
         <item>@color/yellow_50</item>
         <item>@color/yellow_100</item>
         <item>@color/yellow_200</item>
@@ -365,8 +347,8 @@
         <item>@color/yellow_700</item>
         <item>@color/yellow_800</item>
         <item>@color/yellow_900</item>
-	</array>
-	<array name="amber">
+    </array>
+    <array name="amber">
         <item>@color/amber_50</item>
         <item>@color/amber_100</item>
         <item>@color/amber_200</item>
@@ -377,8 +359,8 @@
         <item>@color/amber_700</item>
         <item>@color/amber_800</item>
         <item>@color/amber_900</item>
-	</array>
-	<array name="orange">
+    </array>
+    <array name="orange">
         <item>@color/orange_50</item>
         <item>@color/orange_100</item>
         <item>@color/orange_200</item>
@@ -389,8 +371,8 @@
         <item>@color/orange_700</item>
         <item>@color/orange_800</item>
         <item>@color/orange_900</item>
-	</array>
-	<array name="deep_orange">
+    </array>
+    <array name="deep_orange">
         <item>@color/deep_orange_50</item>
         <item>@color/deep_orange_100</item>
         <item>@color/deep_orange_200</item>
@@ -401,8 +383,8 @@
         <item>@color/deep_orange_700</item>
         <item>@color/deep_orange_800</item>
         <item>@color/deep_orange_900</item>
-	</array>
-	<array name="brown">
+    </array>
+    <array name="brown">
         <item>@color/brown_50</item>
         <item>@color/brown_100</item>
         <item>@color/brown_200</item>
@@ -413,8 +395,8 @@
         <item>@color/brown_700</item>
         <item>@color/brown_800</item>
         <item>@color/brown_900</item>
-	</array>
-	<array name="grey">
+    </array>
+    <array name="grey">
         <item>@color/grey_50</item>
         <item>@color/grey_100</item>
         <item>@color/grey_200</item>
@@ -425,8 +407,8 @@
         <item>@color/grey_700</item>
         <item>@color/grey_800</item>
         <item>@color/grey_900</item>
-	</array>
-	<array name="blue_gray">
+    </array>
+    <array name="blue_gray">
         <item>@color/blue_gray_50</item>
         <item>@color/blue_gray_100</item>
         <item>@color/blue_gray_200</item>
@@ -437,6 +419,6 @@
         <item>@color/blue_gray_700</item>
         <item>@color/blue_gray_800</item>
         <item>@color/blue_gray_900</item>
-	</array>
-	
+    </array>
+
 </resources>
