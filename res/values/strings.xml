@@ -4,7 +4,8 @@
     <string name="app_name">Moder Art UI</string>
     <string name="hello_world">Hello</string>
     <string name="more_information">More Information</string>
-    <string name="dialog_message">Inspired by Sol LeWitt\'s work, recreated by Willow Cheng. This application is finished in October, 2014, and I\'m willing to add more features and funcational user interaction. Click below to learn about MOMA!</string>
+    <string name="dialog_message">Inspired by Sol LeWitt\'s work, recreated by Willow Cheng. This application is finished in Oct 2014, and I\'m willing to add more features and funcational user interaction. Click below to learn about MOMA!</string>
     <string name="dialog_title">Wall Drawing</string>
+    
 
 </resources>
