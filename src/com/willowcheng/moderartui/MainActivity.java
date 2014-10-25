@@ -2,8 +2,7 @@ package com.willowcheng.moderartui;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
+import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,12 +13,13 @@ import android.view.MenuItem;
 public class MainActivity extends Activity {
 
 	static final String MOMA_URI = "http://www.moma.org/";
-	private static DialogFragment mDialog;
+	private Builder mBuilder;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		mBuilder = new AlertDialog.Builder(this);
 	}
 
 	@Override
@@ -36,51 +36,32 @@ public class MainActivity extends Activity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.more_information) {
-
-			mDialog = AlertDialogFragment.newInstance();
-			mDialog.show(getFragmentManager(), "Alert");
+			moreInformationBuilderSet();
+			mBuilder.create().show();
 		}
 		return super.onOptionsItemSelected(item);
 	}
 
-	public static class AlertDialogFragment extends DialogFragment {
+	private void moreInformationBuilderSet() {
+		// TODO Auto-generated method stub
 
-		public static AlertDialogFragment newInstance() {
-			return new AlertDialogFragment();
-		}
-
-		// Build AlertDialog using AlertDialog.Builder
-		@Override
-		public Dialog onCreateDialog(Bundle savedInstanceState) {
-
-			return new AlertDialog.Builder(getActivity())
-					.setTitle(R.string.dialog_title)
-					.setMessage(R.string.dialog_message).setIcon(R.drawable.ic_launcher)
-
-					// User cannot dismiss dialog by hitting back button
-					.setCancelable(false)
-
-					// Set up No Button
-					.setNegativeButton("Visit MOMA",
-							new DialogInterface.OnClickListener() {
-								public void onClick(DialogInterface dialog,
-										int id) {
-									Intent intent = new Intent(
-											Intent.ACTION_VIEW, Uri
-													.parse(MOMA_URI));
-									startActivity(intent);
-								}
-							})
-
-					// Set up Yes Button
-					.setPositiveButton("Not Now",
-							new DialogInterface.OnClickListener() {
-								public void onClick(
-										final DialogInterface dialog, int id) {
-									mDialog.dismiss();
-								}
-							}).create();
-
-		}
+		mBuilder.setIcon(R.drawable.ic_launcher)
+				.setTitle(R.string.dialog_title)
+				.setMessage(R.string.dialog_message)
+				.setNegativeButton("Visit MOMA",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog, int id) {
+								Intent intent = new Intent(Intent.ACTION_VIEW,
+										Uri.parse(MOMA_URI));
+								startActivity(intent);
+							}
+						})
+				.setPositiveButton("Not Now",
+						new DialogInterface.OnClickListener() {
+							public void onClick(final DialogInterface dialog,
+									int id) {
+								dialog.dismiss();
+							}
+						});
 	}
 }
