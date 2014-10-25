@@ -34,21 +34,24 @@ public class MainActivity extends Activity {
 			R.color.yellow_400, R.color.green_200, R.color.grey_300, };
 	static final String TAG = "Hello";
 	private int color = 4;
+	private ColorDrawable backgroundColor;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		randInt = new Random();
-
 		mBuilder = new AlertDialog.Builder(this);
+
 		seekBar = (SeekBar) findViewById(R.id.mSeekBar);
+		seekBar.setMax(255);
+
 		rootLayout = (LinearLayout) findViewById(R.id.rootlayout);
 		countLayout = rootLayout.getChildCount();
+		randInt = new Random();
+
 		for (int i = 0; i < countLayout - 1; i++) {
 			horizontalLayout = (LinearLayout) rootLayout.getChildAt(i);
-			// do something with your child element
 
 			for (int j = 0; j < 6; j++) {
 				randomWeight = randInt.nextInt(3) + 1;
@@ -84,12 +87,16 @@ public class MainActivity extends Activity {
 					horizontalLayout = (LinearLayout) rootLayout.getChildAt(j);
 					for (int k = 0; k < 6; k++) {
 						textView = (TextView) horizontalLayout.getChildAt(k);
-						ColorDrawable backgroundColor = (ColorDrawable) textView
+						backgroundColor = (ColorDrawable) textView
 								.getBackground();
-						int colorId = backgroundColor.getColor();
-						if (colorId != getResources()
-								.getColor(R.color.grey_300)) {
-							textView.setBackgroundColor(Color.rgb(i, i, i));
+						int colorValue = backgroundColor.getColor();
+						if (colorValue != getResources().getColor(
+								R.color.grey_300)) {
+							int red = (colorValue >> 16) & 0xFF;
+							int green = (colorValue >> 8) & 0xFF;
+							int blue = (colorValue >> 0) & 0xFF;
+							textView.setBackgroundColor(Color.argb(255 - i,
+									red, green, blue));
 						}
 						;
 
