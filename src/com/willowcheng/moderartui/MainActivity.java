@@ -35,6 +35,9 @@ public class MainActivity extends Activity {
 	static final String TAG = "Hello";
 	private int color = 4;
 	private ColorDrawable backgroundColor;
+	private int red[][];
+	private int green[][];
+	private int blue[][];
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -90,29 +93,53 @@ public class MainActivity extends Activity {
 						backgroundColor = (ColorDrawable) textView
 								.getBackground();
 						int colorValue = backgroundColor.getColor();
+						Log.i(TAG, "Success");
+						red[j][k] = (colorValue >> 16) & 0xFF;
+						green[j][k] = (colorValue >> 8) & 0xFF;
+						blue[j][k] = (colorValue >> 0) & 0xFF;
+					}
+
+				}
+
+				for (int j = 0; j < countLayout - 1; j++) {
+					horizontalLayout = (LinearLayout) rootLayout.getChildAt(j);
+					for (int k = 0; k < 6; k++) {
+						textView = (TextView) horizontalLayout.getChildAt(k);
+						backgroundColor = (ColorDrawable) textView
+								.getBackground();
+						int colorValue = backgroundColor.getColor();
+						
 						if (colorValue != getResources().getColor(
 								R.color.grey_300)) {
-							int red = (colorValue >> 16) & 0xFF;
-							int green = (colorValue >> 8) & 0xFF;
-							int blue = (colorValue >> 0) & 0xFF;
-							textView.setBackgroundColor(Color.argb(255 - i,
-									red, green, blue));
+							if (colorValue == (getResources()
+									.getColor(colors[0]))) {
+								textView.setBackgroundColor(Color.rgb(
+										red[j][k], green[j][k] + i, blue[j][k]
+												+ i));
+							} else if (colorValue == (getResources()
+									.getColor(colors[1]))) {
+								textView.setBackgroundColor(Color.rgb(red[j][k]
+										+ i, green[j][k], blue[j][k] + i));
+							} else if (colorValue == (getResources()
+									.getColor(colors[3]))) {
+								textView.setBackgroundColor(Color.rgb(red[j][k]
+										+ i, green[j][k] + i, blue[j][k]));
+							} else {
+								textView.setBackgroundColor(Color.rgb(
+										red[j][k], green[j][k], blue[j][k] + i));
+							}
 						}
-						;
-
 					}
 				}
 			}
 
 			@Override
 			public void onStartTrackingTouch(SeekBar arg0) {
-				// TODO Auto-generated method stub
 
 			}
 
 			@Override
 			public void onStopTrackingTouch(SeekBar arg0) {
-				// TODO Auto-generated method stub
 
 			}
 		});
