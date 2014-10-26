@@ -11,7 +11,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.LinearLayout;
@@ -30,14 +29,11 @@ public class MainActivity extends Activity {
 	private Random randInt;
 	private int randomWeight;
 	private LinearLayout rootLayout;
-	static final int colors[] = { R.color.red_300, R.color.blue_300,
-			R.color.yellow_400, R.color.green_200, R.color.grey_300, };
+	static final int colors[] = { R.color.red_400, R.color.blue_400,
+			R.color.yellow_400, R.color.green_400, R.color.grey_300, };
 	static final String TAG = "Hello";
 	private int color = 4;
 	private ColorDrawable backgroundColor;
-	private int red[][];
-	private int green[][];
-	private int blue[][];
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +60,6 @@ public class MainActivity extends Activity {
 				textView.setBackgroundColor(randomColor());
 				textView.setLayoutParams(new LinearLayout.LayoutParams(0,
 						LayoutParams.MATCH_PARENT, (float) randomWeight));
-				Log.i(TAG, Integer.toString(randomWeight));
 
 				horizontalLayout.addView(textView);
 			}
@@ -83,23 +78,25 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onResume() {
+		final int red[][] = new int[12][6];
+		final int green[][] = new int[12][6];
+		final int blue[][] = new int[12][6];
+		for (int j = 0; j < countLayout - 1; j++) {
+			horizontalLayout = (LinearLayout) rootLayout.getChildAt(j);
+			for (int k = 0; k < 6; k++) {
+				textView = (TextView) horizontalLayout.getChildAt(k);
+				backgroundColor = (ColorDrawable) textView.getBackground();
+				int colorValue = backgroundColor.getColor();
+				red[j][k] = (colorValue >> 16) & 0xFF;
+				green[j][k] = (colorValue >> 8) & 0xFF;
+				blue[j][k] = (colorValue >> 0) & 0xFF;
+			}
+
+		}
 		seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
 			@Override
 			public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-				for (int j = 0; j < countLayout - 1; j++) {
-					horizontalLayout = (LinearLayout) rootLayout.getChildAt(j);
-					for (int k = 0; k < 6; k++) {
-						textView = (TextView) horizontalLayout.getChildAt(k);
-						backgroundColor = (ColorDrawable) textView
-								.getBackground();
-						int colorValue = backgroundColor.getColor();
-						Log.i(TAG, "Success");
-						red[j][k] = (colorValue >> 16) & 0xFF;
-						green[j][k] = (colorValue >> 8) & 0xFF;
-						blue[j][k] = (colorValue >> 0) & 0xFF;
-					}
-
-				}
 
 				for (int j = 0; j < countLayout - 1; j++) {
 					horizontalLayout = (LinearLayout) rootLayout.getChildAt(j);
@@ -108,7 +105,7 @@ public class MainActivity extends Activity {
 						backgroundColor = (ColorDrawable) textView
 								.getBackground();
 						int colorValue = backgroundColor.getColor();
-						
+
 						if (colorValue != getResources().getColor(
 								R.color.grey_300)) {
 							if (colorValue == (getResources()
@@ -119,11 +116,11 @@ public class MainActivity extends Activity {
 							} else if (colorValue == (getResources()
 									.getColor(colors[1]))) {
 								textView.setBackgroundColor(Color.rgb(red[j][k]
-										+ i, green[j][k], blue[j][k] + i));
+										+ i, green[j][k] + i, blue[j][k]));
 							} else if (colorValue == (getResources()
 									.getColor(colors[3]))) {
 								textView.setBackgroundColor(Color.rgb(red[j][k]
-										+ i, green[j][k] + i, blue[j][k]));
+										+ i, green[j][k], blue[j][k] + i));
 							} else {
 								textView.setBackgroundColor(Color.rgb(
 										red[j][k], green[j][k], blue[j][k] + i));
@@ -134,13 +131,11 @@ public class MainActivity extends Activity {
 			}
 
 			@Override
-			public void onStartTrackingTouch(SeekBar arg0) {
-
+			public void onStartTrackingTouch(SeekBar seekBar) {
 			}
 
 			@Override
-			public void onStopTrackingTouch(SeekBar arg0) {
-
+			public void onStopTrackingTouch(SeekBar seekBar) {
 			}
 		});
 		super.onResume();
